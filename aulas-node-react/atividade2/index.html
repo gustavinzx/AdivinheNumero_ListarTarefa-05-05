@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 Lista de Tarefas</h1>
+
+    <div class="input-area">
+      <input type="text" id="inputTarefa" placeholder="Digite uma nova tarefa..." />
+      <button onclick="adicionarTarefa()">Adicionar</button>
+    </div>
+
+    <div class="filtros">
+      <button class="ativo" onclick="filtrar('todas', this)">Todas</button>
+      <button onclick="filtrar('pendentes', this)">Pendentes</button>
+      <button onclick="filtrar('concluidas', this)">Concluídas</button>
+    </div>
+
+    <ul id="listaTarefas"></ul>
+    <p class="vazio" id="msgVazio" style="display:none">Nenhuma tarefa aqui!</p>
+
+    <div class="contador" id="contador"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
